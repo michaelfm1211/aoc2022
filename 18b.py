@@ -1,5 +1,5 @@
 from itertools import product
-from collections import deque
+from collections import queue
 
 
 # get all air blocks
@@ -36,7 +36,7 @@ while len(unvisited) > 0:
     groups.append([])
     start = next(iter(unvisited))
 
-    q = deque([start])
+    q = queue([start])
     while q:
         v = q.pop()
         if v in unvisited:
